@@ -7,6 +7,7 @@ Project is 30% done.
 
 
 To do list:
+- Change ListView to RecyclerView
 - Implement Navigation Drawer
 - Treat possible errors and exceptions
 - change XML parser to Retrofit with xml factory
