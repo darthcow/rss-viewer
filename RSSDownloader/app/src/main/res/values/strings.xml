@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RSS Downloader</string>
+    <string name="free_menu_text">Free Apps</string>
+    <string name="paid_menu_text">Paid Apps</string>
+    <string name="songs_menu_text">Songs</string>
+    <string name="movies_menu_text">Movies</string>
+</resources>
