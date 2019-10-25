@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~ * Created by Darthcow
+  ~ * Last modified 25/10/19 12:22
+  ~ */
+  -->
+
+<!--
+  ~ /*
+  ~ * Created by Julio Cesar Almeida
+  ~ * Last modified 16/10/19 08:57
+  ~ */
+  -->
+
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>

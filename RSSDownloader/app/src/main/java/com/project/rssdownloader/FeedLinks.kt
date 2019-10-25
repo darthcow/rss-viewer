@@ -1,3 +1,12 @@
+/*
+ *
+ *  Created by Darthcow
+ *  Last modified 25/10/19 12:22
+ * /
+ */
+
+
+
 package com.project.rssdownloader
 
 class FeedLinks {

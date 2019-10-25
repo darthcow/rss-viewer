@@ -1,5 +1,6 @@
 <component name="CopyrightManager">
   <copyright>
+    <option name="allowReplaceRegexp" value="true" />
     <option name="notice" value="/*&#10;* Created by Julio Cesar Almeida&#10;* Last modified &amp;#36;{file.lastModified}&#10;*/" />
     <option name="myName" value="Julio Cesar Almeida" />
   </copyright>
