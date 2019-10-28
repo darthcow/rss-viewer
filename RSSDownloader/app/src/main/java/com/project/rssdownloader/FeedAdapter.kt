@@ -59,6 +59,9 @@ class FeedAdapter(
 //        this.notifyDataSetChanged()
         return view
     }
-}
 
-//R.layout.list_record,ArrayList<FeedEntry>
+    fun setFeedList(feedEntries: List<FeedEntry>) {
+    applications = feedEntries
+        notifyDataSetChanged()
+    }
+}
