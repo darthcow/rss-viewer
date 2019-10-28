@@ -17,7 +17,6 @@ import java.util.*
 
 class ParseApplications {
 
-    companion object {
         private val TAG = "ParseApplications"
         val applications = ArrayList<FeedEntry>()
     fun parse(xmlData: String): Boolean {
@@ -79,5 +78,4 @@ class ParseApplications {
 
         return status
     }
-}
 }
