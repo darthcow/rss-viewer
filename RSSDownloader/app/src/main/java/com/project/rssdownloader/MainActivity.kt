@@ -17,6 +17,8 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.activity_main.*
 import java.net.URL
 import kotlin.properties.Delegates
@@ -27,14 +29,21 @@ class FeedEntry {
     var releaseDate: String = ""
     var summary: String = ""
     var imageURL: String = ""
-   
+
 }
 
 class MainActivity : AppCompatActivity() {
     private val feedSize = 10
+    private val feedViewModel by lazy { ViewModelProviders.of(this).get(FeedViewModel::class.java) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val feedAdapter = FeedAdapter(this, R.layout.list_record, EMPTY_FEED_LIST)
+        xmlListView.adapter = feedAdapter
+        feedViewModel.feedEntries.observe(
+            this,
+            Observer<List<FeedEntry>> { feedEntries -> feedAdapter.setFeedList(feedEntries) })
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -44,34 +53,17 @@ class MainActivity : AppCompatActivity() {
             R.id.menuPaid -> FeedLinks.PaidApps
             R.id.menuSongs -> FeedLinks.Songs
             else -> {
+                feedViewModel.invalidate()
                 return super.onOptionsItemSelected(item)
             }
         }
-
-        downloadURL(url)
+        feedViewModel.downloadURL(url)
         return true
     }
 
-    private fun downloadURL(url: String) {
-        downloadData = DownloadData(this, xmlListView)
-        ParseApplications.applications.clear()
-        downloadData?.execute(url)
-    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.feeds_menu, menu)
         return true
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        downloadData?.cancel(true)
-
-    }
-
-    companion object {
-        private val TAG = "MainActivity"
-
-
     }
 }
