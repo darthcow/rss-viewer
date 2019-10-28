@@ -83,46 +83,6 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private val TAG = "MainActivity"
 
-        private class DownloadData(context: Context, listView: ListView) :
-            AsyncTask<String, Void, String>() {
-            var mContext: Context by Delegates.notNull()
-            var mListView: ListView by Delegates.notNull()
 
-            init {
-                mContext = context
-                mListView = listView
-            }
-
-            override fun doInBackground(vararg p0: String?): String {
-                Log.d(TAG, "doInBackground called starts with ${p0[0]}")
-                val feed = downloadXML(p0[0])
-                if (feed.isEmpty()) {
-                    Log.d(TAG, "error downloading feed")
-                }
-                return feed
-            }
-
-            override fun onPostExecute(result: String) {
-                super.onPostExecute(result)
-                ParseApplications.parse(result)
-                Log.d(TAG, "onPostExecute called, parameter is $result ")
-                //context,item format, list of itens
-//                val arrayAdapter = ArrayAdapter<FeedEntry>(
-//                    mContext,
-//                    R.layout.list_item,
-//                    ParseApplications.applications
-//                )
-
-//                mListView.adapter = arrayAdapter
-                val feedAdapter =
-                    FeedAdapter(mContext, R.layout.list_record, ParseApplications.applications)
-                mListView.adapter = feedAdapter
-            }
-        }
-
-        private fun downloadXML(urlPath: String?): String {
-            return URL(urlPath).readText()
-
-        }
     }
 }
