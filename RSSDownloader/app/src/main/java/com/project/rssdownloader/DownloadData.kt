@@ -37,19 +37,20 @@ private class DownloadData(private val callBack: DownloaderCallBack) :
 
     override fun onPostExecute(result: String) {
         super.onPostExecute(result)
-        ParseApplications.parse(result)
-        Log.d("", "onPostExecute called, parameter is $result ")
+        val parseApplications = ParseApplications()
+        if (result.isNotEmpty())
+            parseApplications.parse(result)
 
-        val feedAdapter =
-            FeedAdapter(mContext, R.layout.list_record, ParseApplications.applications)
-        mListView.adapter = feedAdapter
+        callBack.onDataAvailable(parseApplications.applications)
+//        val feedAdapter = FeedAdapter(mContext, R.layout.list_record, parseApplications.applications)
+//        mListView.adapter = feedAdapter
     }
 
 
-    private fun downloadXML(urlPath: String): String {
+    private fun downloadXML(urlPath: String?): String {
         return try {
             URL(urlPath).readText()
-        } catch (e: Exception){
+        } catch (e: Exception) {
             "Error parsing XML:${e.message}"
         }
 
