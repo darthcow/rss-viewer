@@ -26,20 +26,18 @@ class ViewHolder(view: View) {
 class FeedAdapter(
     context: Context,
     private val resource: Int,
-    private val applications: List<FeedEntry>
+    private var applications: List<FeedEntry>
 ) :
     ArrayAdapter<FeedEntry>(context, resource) {
 
 
     private val inflater = LayoutInflater.from(context)
 
-    override fun getCount(): Int {
-        return applications.size
+    override fun getCount(): Int = applications.size
 
-    }
+
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-//        val view: View = convertView ?: inflater.inflate(resource, parent, false)
         val view: View
         val holder: ViewHolder
 
