@@ -35,13 +35,10 @@ class FeedEntry {
               imageURL = $imageURL
            
          """.trimIndent()
-//        summary = $summary
     }
 }
 
 class MainActivity : AppCompatActivity() {
-    //    private lateinit var downloadData: DownloadData
-    private var downloadData: DownloadData? = null
     private val feedSize = 10
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
