@@ -14,4 +14,5 @@ To do list:
 - get and display images from RSS
 - Implement simple and default animations
 - Implement Best practices
+- Ultimately enable this app to read any rss feed provided 
 
