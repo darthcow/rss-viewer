@@ -15,4 +15,4 @@ To do list:
 - Implement simple and default animations
 - Implement Best practices
 - Ultimately enable this app to read any rss feed provided 
-
+- Implement UI tests
