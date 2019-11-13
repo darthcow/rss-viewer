@@ -3,9 +3,6 @@ App I made while studying Android development
 ---
 App lists RSS Feeds from Apple's site (https://www.apple.com/rss/)
 
-Project is 30% done.
-
-
 To do list:
 - Change ListView to RecyclerView
 - Implement Navigation Drawer
