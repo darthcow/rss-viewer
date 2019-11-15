@@ -14,3 +14,5 @@ To do list:
 - Implement UI tests
 - Implement animations
 - Ultimately enable this app to read any rss feed provided 
+- Implement ViewModel Architeture
+- Implement DataBinding
