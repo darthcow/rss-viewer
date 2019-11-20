@@ -16,3 +16,4 @@ To do list:
 - Ultimately enable this app to read any rss feed provided 
 - Implement ViewModel Architeture
 - Implement [DataBinding](https://developer.android.com/topic/libraries/data-binding)
+- Add Launcher Icon
