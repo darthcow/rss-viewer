@@ -17,3 +17,4 @@ To do list:
 - Implement ViewModel Architeture
 - Implement [DataBinding](https://developer.android.com/topic/libraries/data-binding)
 - Add Launcher Icon
+- Implement Architeture Components
