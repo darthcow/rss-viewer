@@ -11,7 +11,7 @@ To do list:
 - get and display images from RSS
 - Implement simple and default animations
 - Implement Best practices
-- Implement UI tests
+- Implement UI tests with Espresso
 - Implement animations
 - Ultimately enable this app to read any rss feed provided 
 - Implement ViewModel Architeture
