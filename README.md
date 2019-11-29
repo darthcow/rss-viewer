@@ -19,3 +19,4 @@ To do list:
 - Add Launcher Icon
 - Implement Architeture Components
 - Implement DI with Koin
+- Implement Navigation
