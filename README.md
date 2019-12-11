@@ -20,3 +20,4 @@ To do list:
 - Implement Architeture Components
 - Implement DI with Koin
 - Implement Navigation
+- Implement Clean Architeture
