@@ -13,7 +13,6 @@ To do list:
 - Implement Best practices
 - Implement UI tests with Espresso
 - Implement animations
-- Ultimately enable this app to read any rss feed provided 
 - Implement ViewModel Architeture
 - Implement [DataBinding](https://developer.android.com/topic/libraries/data-binding)
 - Add Launcher Icon
@@ -21,3 +20,8 @@ To do list:
 - Implement DI with Koin
 - Implement Navigation
 - Implement Clean Architeture
+- Implement [Paging](https://developer.android.com/topic/libraries/architecture/paging/)
+
+
+- Ultimately enable this app to read any rss feed provided 
+
