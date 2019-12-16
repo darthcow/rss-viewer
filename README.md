@@ -18,7 +18,7 @@ To do list:
 - Add Launcher Icon
 - Implement Architeture Components
 - Implement DI with Koin
-- Implement Navigation
+- Implement [Navigation](https://developer.android.com/guide/navigation)
 - Implement Clean Architeture
 - Implement [Paging](https://developer.android.com/topic/libraries/architecture/paging/)
 
