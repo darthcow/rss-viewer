@@ -21,6 +21,7 @@ To do list:
 - Implement [Navigation](https://developer.android.com/guide/navigation)
 - Implement Clean Architeture
 - Implement [Paging](https://developer.android.com/topic/libraries/architecture/paging/)
+- Follow Material Design
 
 
 - Ultimately enable this app to read any rss feed provided 
